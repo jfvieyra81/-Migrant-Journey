@@ -864,8 +864,8 @@ function answer(v){ closeDlg(); var r=dlgRes; dlgRes=null; if(r) r(v); }
    Reduced motion → static 3-step storyboard (stills). Video is always muted; sound comes from Web Audio (respects Sound On/Off). */
 var CINE_T = [];
 function cineOK(o){ return !!(o && o.cine && S.cfg.cine && CINE[o.cine] && !(o.noCineIf && S.inv[o.noCineIf]>0)); }
-var VCODEC=(function(){ try{ var v=document.createElement("video"); if(v.canPlayType('video/mp4; codecs="avc1.640028"')) return "mp4"; if(v.canPlayType('video/webm; codecs="vp9"')) return "webm"; }catch(e){} return "mp4"; })();
-function cineSrc(id){ return "media/"+id+"."+VCODEC; }  /* H.264 MP4 first (Chrome/ChromeOS); VP9 WebM backup for browsers without H.264 */
+var VCODEC=(function(){ try{ var v=document.createElement("video"); if(v.canPlayType('video/webm; codecs="vp9"')) return "webm"; if(v.canPlayType('video/webm')) return "webm"; if(v.canPlayType('video/mp4')) return "mp4"; }catch(e){} return "webm"; })();
+function cineSrc(id){ return "media/"+id+"."+VCODEC; }  /* VP9 WebM first for Chrome and ChromeOS; H.264 MP4 backup */
 function preloadCines(ids){
   var box=$("preload"); if(!box) return; var want={}; ids.filter(function(x){return x && CINE[x];}).forEach(function(x){ want[x]=1; });
   Array.prototype.slice.call(box.children).forEach(function(v){ if(!want[v.getAttribute("data-id")]) v.remove(); else delete want[v.getAttribute("data-id")]; });
