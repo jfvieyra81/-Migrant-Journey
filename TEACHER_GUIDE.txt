@@ -1,0 +1,65 @@
+MIGRATION JOURNEY · GUÍA DEL MAESTRO (SS7 · Periodo 5)
+======================================================
+
+1. QUÉ ES
+Videojuego de repaso (20–25 min + Partner Talk + evidencia final). La comunidad del estudiante se mueve,
+durante muchas generaciones, de Asia → Beringia → norte de América → ruta del bosque o del río →
+Centroamérica → región maya (tierras altas o bajas). English first + apoyo en español (selector
+LANGUAGE SUPPORT, predeterminado English + Español).
+
+2. NUEVO EN ESTA VERSIÓN
+- 10 cinemáticas breves (3.4–3.8 s) hechas con Helios que muestran la CONSECUENCIA de decisiones clave.
+  Orden: decisión → cinemática → cambio de recursos → Mission Check → retroalimentación → explicación
+  geográfica → objeto/insignia → mapa.
+- Mission Checks: 6 microquizzes (uno por nivel) de 3 opciones con íconos, audio EN/ES, pista en el
+  primer error y segundo intento. Nunca quitan recursos. Si el estudiante vive la ruptura de la canoa,
+  el check de esa experiencia (mc_canoe) sustituye al check general del nivel 4.
+
+3. CINEMÁTICAS (se activan solo con la decisión real correspondiente)
+  canoe-break            Río · "Paddle the canoe" en Strong Current (sin balsa) → Food −2
+  successful-fishing     "Catch fish" (río) · "Fish on the coast" (Beringia) → Food +
+  storm-shelter          "Find shelter" (tormenta) · "Camp on a hill" (tormenta tropical) → Safety +
+  flooded-camp           "Stay by the water" (inundación) · "Move into the forest" (tierra baja inundada) → Safety −
+  animal-tracks          "Follow the tracks" · "Follow the herd" · emergencia de comida → Food +
+  shelter-construction   "Build a shelter" (bosque) · "Build on a stone platform" (tierras bajas) → Safety +
+  cenote-discovery       descubrir el cenote · "Go to a cenote" · "Camp near it" → Water +
+  obsidian-discovery     descubrir la obsidiana · "Explore more" · "Collect more obsidian" → objeto Obsidian
+  settle-highlands       asentarse en las tierras altas
+  settle-lowlands        asentarse en las tierras bajas
+Botón Skip / Saltar (también Esc). El video no tiene texto ni audio; el HTML narra, traduce y muestra
+los números. Con Reduced Motion: secuencia fija de 3 imágenes + descripción + botón Continuar.
+Si un video falta o falla: animación sencilla de íconos + descripción, y el juego continúa.
+
+4. MISSION CHECKS
+  mc1 Asia       Why did the community start moving?  → The animals they hunted were moving
+  mc2 Beringia   What was Beringia?                     → Land that connected Asia and North America
+  mc3 North      What did the cold north offer people?  → Large animals for food and hides
+  mc4 Forest     What did the forest route offer?       → Wood, plants, and animals
+  mc4 River      What was a risk of the river route?    → Floods and strong currents
+  mc_canoe       Which geographic feature created the danger? → Strong river current
+  mc5 Central    What helped people begin farming here? → Warm weather and rain
+  mc6 Maya       Which pair is correct?                 → Highlands: obsidian · Lowlands: cenotes
+El reporte final separa: decisiones del juego, recursos y "Learning checked" (primer intento,
+después de pista, respuesta mostrada, concepto). No es una calificación final.
+
+5. PANEL DEL MAESTRO (botón "Teacher" en el título o en Pausa · código 1234)
+El código solo evita aperturas accidentales; no es seguridad.
+- Jump to a level / Final screen / Demo: emergency
+- Cinematics: Play clip · Reduced-motion preview · Test missing-video fallback · Preview all clips
+- Preview Mission Check (muestra pregunta, respuesta y pista; no guarda nada)
+- Jump to event (cualquier evento; no guarda resultados de Mission Checks)
+- Cinematics On/Off · Mission Checks On/Off · Inspect quiz results
+- Idioma, sonido, movimiento reducido, drama timer, reiniciar (2 confirmaciones)
+Saltar de nivel marca el viaje como TEACHER DEMO. Reinicie antes de que juegue un estudiante.
+
+6. EN CLASE
+- Pida a los estudiantes que usen audífonos si el sonido está encendido (o Sound Off).
+- Partner Talk 1 (después de la ruta) y 2 (antes de asentarse): ~1 minuto cada uno.
+- Evidencia principal: la oración final + los Mission Checks. Revise el código de finalización.
+
+7. LIMITACIONES CONOCIDAS
+- Probado en Chromium (Linux) a 1024×600; falta prueba en Chromebook físico.
+- El Chromium de prueba no decodifica H.264; allí se verificó la reproducción real con la copia WebM
+  (mismos fotogramas). Chrome de ChromeOS sí reproduce H.264.
+- Las voces EN/ES dependen de ChromeOS. El micrófono (dictado) usa servicios de Google y puede estar
+  bloqueado en Chromebooks administrados.
